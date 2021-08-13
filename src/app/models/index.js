@@ -4,8 +4,6 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
-  operatorsAliases: false,
-
   pool: {
     max: dbConfig.pool.max,
     min: dbConfig.pool.min,
@@ -19,6 +17,20 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.room = require("./room.model.js")(sequelize, Sequelize);
+const Room = sequelize.define("room", {
+  title: {
+    // Should be unique
+    type: Sequelize.STRING
+  }
+});
+const Member = sequelize.define("member", {
+  name: {
+    // Should be unique for the room
+    type: Sequelize.STRING
+  }
+});
+Member.belongsTo(Room);
 
+db.room = Room;
+db.member = Member;
 module.exports = db;
