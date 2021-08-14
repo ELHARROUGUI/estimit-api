@@ -5,9 +5,6 @@ let router = require("express").Router();
 
 router.post("/rooms/", room.create);
 router.get("/rooms/", room.findAll);
-router.get("/rooms/:id", room.findOne);
-router.put("/rooms/:id", room.update);
-router.delete("/rooms/:id", room.delete);
 
 router.post("/members/", member.create);
 router.get("/members/", member.findAll);

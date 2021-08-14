@@ -3,7 +3,6 @@ const Member = db.member;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-  console.log(">>>" + JSON.stringify(req.body));
   if (!req.body.name || !req.body.room.id) {
     res.status(400).send({
       message: "Content can not be empty!"
