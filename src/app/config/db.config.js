@@ -12,10 +12,10 @@
   }
 }; */
 module.exports = {
-  HOST: "z83915054-mysql.qovery.io",
+  HOST: "z97663d51-mysql.qovery.io",
   USER: "root",
   PORT: "3306",
-  PASSWORD: "RMY9OMJBGK1YQ5Z0",
+  PASSWORD: "t5onDDXWLTouKbWG",
   DB: "mysql",
   dialect: "mysql",
   pool: {
