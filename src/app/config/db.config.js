@@ -15,7 +15,7 @@ module.exports = {
   HOST: "z171c115a-mysql.qovery.io",
   USER: "root",
   PASSWORD: "76OxsLnl8iIRx5Fu",
-  DB: "z171c115a",
+  DB: "estimitdb",
   dialect: "mysql",
   pool: {
     max: 5,
