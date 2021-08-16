@@ -16,7 +16,7 @@ module.exports = {
   USER: "root",
   PORT: "3306",
   PASSWORD: "RMY9OMJBGK1YQ5Z0",
-  DB: "estimitdb",
+  DB: "mysql",
   dialect: "mysql",
   pool: {
     max: 5,
